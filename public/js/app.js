@@ -13,6 +13,7 @@ $(document).ready(function() {
         itemsTablet: [768, 1], //2 items between 600 and 0
         itemsMobile: false // itemsMobile disabled - inherit from itemsTablet option
     });
+    
 
     // Custom Navigation Events
     $('.next').click(function() {
@@ -20,5 +21,15 @@ $(document).ready(function() {
     });
     $('.prev').click(function() {
         owl.trigger('owl.prev');
+    });
+
+    //mobile gamburger
+    //$("#respMenu").aceResponsiveMenu();
+
+
+    $("#respMenu").aceResponsiveMenu({
+        resizeWidth: '768', // Set the same in Media query       
+        animationSpeed: 'fast', //slow, medium, fast
+        accoridonExpAll: false   //Expands all the accordion menu on click
     });
 });
