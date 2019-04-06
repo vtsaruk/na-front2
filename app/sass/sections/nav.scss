@@ -1,0 +1,28 @@
+.nav-area {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  
+  ul {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+  
+  }
+
+  li {
+    display: inline-block;
+
+    a {
+      padding: 30px;
+      color: #1b473b;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+    }
+
+    a:hover {
+      background: #48beb7;
+      color: white;
+    }
+  }
+}

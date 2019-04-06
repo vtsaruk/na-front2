@@ -1,0 +1,94 @@
+.world-news .container {
+	display: flex;
+  	justify-content: space-between;
+  	height: 440px;
+	font-family: 'Open Sans', sans-serif;
+	
+	.header {
+		display: inline-block;
+		height: 200px;
+		margin: 0;
+		position: relative;
+	}
+
+	.header p {
+		position: absolute;
+		padding: 0 15px;
+	}
+
+	.header .name-news {
+		bottom: 30px;
+
+	}
+	.header .name-country {
+		bottom: 10px;
+	}
+
+    .col {
+        width: 330px;  
+        height: 10px;
+		.box {
+			position: relative;
+		}
+        .line {
+        	height: 5px;
+        	border-radius: 3px;
+        	margin-bottom: 15px;
+        }
+        .filos {
+			background: #1e4ba5;
+        }
+        .cult {
+        	background: #ff9900;
+        }
+        .volunt {
+        	background: #ff0000;
+        }
+        .cover {
+			border-radius: 5px;
+        	height: 200px;
+        	background-size: cover ;
+        }
+        .cover-2 {
+			border-radius: 5px;
+        	height: 200px;
+        	opacity: 0.8;
+        	position: absolute;
+        	z-index: 10;
+        	width: 100%;
+        }
+        .header{
+			height: 200px;
+			border-radius: 5px;
+        	position: absolute;
+        	z-index: 20;
+        	width: 100%;
+        	color: #fff;
+        	&>div {
+        		// display: flex;
+        		// flex-direction: row;
+        		align-content: flex-end;
+        		// align-items: flex-end;
+        		&>div {
+	height: 100px;
+	width: 300px;
+        			// align-self: flex-end;
+        		}
+        	}
+        }        
+        .name-news {
+        	font-size: 18px;
+        	margin-bottom: 11px;
+        }
+        .name-country {
+        	font-size: 12px;
+        }
+		.descript{
+			padding: 15px;
+			color: #727177;
+		}
+        .more {
+        	color: #00bbd6;
+        }         
+    }
+}

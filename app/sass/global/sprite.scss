@@ -1,0 +1,299 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$i-phone-7-1-11-name: 'iPhone-7-1.11';
+$i-phone-7-1-11-x: 894px;
+$i-phone-7-1-11-y: 1274px;
+$i-phone-7-1-11-offset-x: -894px;
+$i-phone-7-1-11-offset-y: -1274px;
+$i-phone-7-1-11-width: 280px;
+$i-phone-7-1-11-height: 565px;
+$i-phone-7-1-11-total-width: 2386px;
+$i-phone-7-1-11-total-height: 2242px;
+$i-phone-7-1-11-image: '../images/sprite.png';
+$i-phone-7-1-11: (894px, 1274px, -894px, -1274px, 280px, 565px, 2386px, 2242px, '../images/sprite.png', 'iPhone-7-1.11', );
+$i-phone-7-1-2-name: 'iPhone-7-1.2';
+$i-phone-7-1-2-x: 596px;
+$i-phone-7-1-2-y: 1274px;
+$i-phone-7-1-2-offset-x: -596px;
+$i-phone-7-1-2-offset-y: -1274px;
+$i-phone-7-1-2-width: 298px;
+$i-phone-7-1-2-height: 602px;
+$i-phone-7-1-2-total-width: 2386px;
+$i-phone-7-1-2-total-height: 2242px;
+$i-phone-7-1-2-image: '../images/sprite.png';
+$i-phone-7-1-2: (596px, 1274px, -596px, -1274px, 298px, 602px, 2386px, 2242px, '../images/sprite.png', 'iPhone-7-1.2', );
+$i-phone-7-1-22-name: 'iPhone-7-1.22';
+$i-phone-7-1-22-x: 0px;
+$i-phone-7-1-22-y: 1274px;
+$i-phone-7-1-22-offset-x: 0px;
+$i-phone-7-1-22-offset-y: -1274px;
+$i-phone-7-1-22-width: 298px;
+$i-phone-7-1-22-height: 602px;
+$i-phone-7-1-22-total-width: 2386px;
+$i-phone-7-1-22-total-height: 2242px;
+$i-phone-7-1-22-image: '../images/sprite.png';
+$i-phone-7-1-22: (0px, 1274px, 0px, -1274px, 298px, 602px, 2386px, 2242px, '../images/sprite.png', 'iPhone-7-1.22', );
+$i-phone-7-shoki-v-1-01-name: 'iPhone-7_shoki_v.1_01';
+$i-phone-7-shoki-v-1-01-x: 298px;
+$i-phone-7-shoki-v-1-01-y: 1274px;
+$i-phone-7-shoki-v-1-01-offset-x: -298px;
+$i-phone-7-shoki-v-1-01-offset-y: -1274px;
+$i-phone-7-shoki-v-1-01-width: 298px;
+$i-phone-7-shoki-v-1-01-height: 602px;
+$i-phone-7-shoki-v-1-01-total-width: 2386px;
+$i-phone-7-shoki-v-1-01-total-height: 2242px;
+$i-phone-7-shoki-v-1-01-image: '../images/sprite.png';
+$i-phone-7-shoki-v-1-01: (298px, 1274px, -298px, -1274px, 298px, 602px, 2386px, 2242px, '../images/sprite.png', 'iPhone-7_shoki_v.1_01', );
+$keyboard-name: 'keyboard';
+$keyboard-x: 640px;
+$keyboard-y: 747px;
+$keyboard-offset-x: -640px;
+$keyboard-offset-y: -747px;
+$keyboard-width: 703px;
+$keyboard-height: 349px;
+$keyboard-total-width: 2386px;
+$keyboard-total-height: 2242px;
+$keyboard-image: '../images/sprite.png';
+$keyboard: (640px, 747px, -640px, -747px, 703px, 349px, 2386px, 2242px, '../images/sprite.png', 'keyboard', );
+$laptop-open-name: 'laptop_open';
+$laptop-open-x: 0px;
+$laptop-open-y: 0px;
+$laptop-open-offset-x: 0px;
+$laptop-open-offset-y: 0px;
+$laptop-open-width: 672px;
+$laptop-open-height: 747px;
+$laptop-open-total-width: 2386px;
+$laptop-open-total-height: 2242px;
+$laptop-open-image: '../images/sprite.png';
+$laptop-open: (0px, 0px, 0px, 0px, 672px, 747px, 2386px, 2242px, '../images/sprite.png', 'laptop_open', );
+$mobile-black-name: 'mobile_black';
+$mobile-black-x: 1343px;
+$mobile-black-y: 747px;
+$mobile-black-offset-x: -1343px;
+$mobile-black-offset-y: -747px;
+$mobile-black-width: 455px;
+$mobile-black-height: 329px;
+$mobile-black-total-width: 2386px;
+$mobile-black-total-height: 2242px;
+$mobile-black-image: '../images/sprite.png';
+$mobile-black: (1343px, 747px, -1343px, -747px, 455px, 329px, 2386px, 2242px, '../images/sprite.png', 'mobile_black', );
+$mobile-white-name: 'mobile_white';
+$mobile-white-x: 1174px;
+$mobile-white-y: 1274px;
+$mobile-white-offset-x: -1174px;
+$mobile-white-offset-y: -1274px;
+$mobile-white-width: 430px;
+$mobile-white-height: 316px;
+$mobile-white-total-width: 2386px;
+$mobile-white-total-height: 2242px;
+$mobile-white-image: '../images/sprite.png';
+$mobile-white: (1174px, 1274px, -1174px, -1274px, 430px, 316px, 2386px, 2242px, '../images/sprite.png', 'mobile_white', );
+$notebook-open-name: 'notebook-open';
+$notebook-open-x: 0px;
+$notebook-open-y: 747px;
+$notebook-open-offset-x: 0px;
+$notebook-open-offset-y: -747px;
+$notebook-open-width: 640px;
+$notebook-open-height: 527px;
+$notebook-open-total-width: 2386px;
+$notebook-open-total-height: 2242px;
+$notebook-open-image: '../images/sprite.png';
+$notebook-open: (0px, 747px, 0px, -747px, 640px, 527px, 2386px, 2242px, '../images/sprite.png', 'notebook-open', );
+$notebook-open-clear-name: 'notebook-open_clear';
+$notebook-open-clear-x: 1268px;
+$notebook-open-clear-y: 0px;
+$notebook-open-clear-offset-x: -1268px;
+$notebook-open-clear-offset-y: 0px;
+$notebook-open-clear-width: 640px;
+$notebook-open-clear-height: 527px;
+$notebook-open-clear-total-width: 2386px;
+$notebook-open-clear-total-height: 2242px;
+$notebook-open-clear-image: '../images/sprite.png';
+$notebook-open-clear: (1268px, 0px, -1268px, 0px, 640px, 527px, 2386px, 2242px, '../images/sprite.png', 'notebook-open_clear', );
+$pen-name: 'pen';
+$pen-x: 0px;
+$pen-y: 1876px;
+$pen-offset-x: 0px;
+$pen-offset-y: -1876px;
+$pen-width: 240px;
+$pen-height: 366px;
+$pen-total-width: 2386px;
+$pen-total-height: 2242px;
+$pen-image: '../images/sprite.png';
+$pen: (0px, 1876px, 0px, -1876px, 240px, 366px, 2386px, 2242px, '../images/sprite.png', 'pen', );
+$pencil-2-name: 'pencil_2';
+$pencil-2-x: 2147px;
+$pencil-2-y: 1272px;
+$pencil-2-offset-x: -2147px;
+$pencil-2-offset-y: -1272px;
+$pencil-2-width: 233px;
+$pencil-2-height: 392px;
+$pencil-2-total-width: 2386px;
+$pencil-2-total-height: 2242px;
+$pencil-2-image: '../images/sprite.png';
+$pencil-2: (2147px, 1272px, -2147px, -1272px, 233px, 392px, 2386px, 2242px, '../images/sprite.png', 'pencil_2', );
+$scr1-name: 'scr1';
+$scr1-x: 1908px;
+$scr1-y: 424px;
+$scr1-offset-x: -1908px;
+$scr1-offset-y: -424px;
+$scr1-width: 239px;
+$scr1-height: 424px;
+$scr1-total-width: 2386px;
+$scr1-total-height: 2242px;
+$scr1-image: '../images/sprite.png';
+$scr1: (1908px, 424px, -1908px, -424px, 239px, 424px, 2386px, 2242px, '../images/sprite.png', 'scr1', );
+$scr2-name: 'scr2';
+$scr2-x: 1908px;
+$scr2-y: 848px;
+$scr2-offset-x: -1908px;
+$scr2-offset-y: -848px;
+$scr2-width: 239px;
+$scr2-height: 424px;
+$scr2-total-width: 2386px;
+$scr2-total-height: 2242px;
+$scr2-image: '../images/sprite.png';
+$scr2: (1908px, 848px, -1908px, -848px, 239px, 424px, 2386px, 2242px, '../images/sprite.png', 'scr2', );
+$scr3-name: 'scr3';
+$scr3-x: 1908px;
+$scr3-y: 1272px;
+$scr3-offset-x: -1908px;
+$scr3-offset-y: -1272px;
+$scr3-width: 239px;
+$scr3-height: 424px;
+$scr3-total-width: 2386px;
+$scr3-total-height: 2242px;
+$scr3-image: '../images/sprite.png';
+$scr3: (1908px, 1272px, -1908px, -1272px, 239px, 424px, 2386px, 2242px, '../images/sprite.png', 'scr3', );
+$shoki-scr-v-1-name: 'shoki_scr_v.1';
+$shoki-scr-v-1-x: 2147px;
+$shoki-scr-v-1-y: 0px;
+$shoki-scr-v-1-offset-x: -2147px;
+$shoki-scr-v-1-offset-y: 0px;
+$shoki-scr-v-1-width: 239px;
+$shoki-scr-v-1-height: 424px;
+$shoki-scr-v-1-total-width: 2386px;
+$shoki-scr-v-1-total-height: 2242px;
+$shoki-scr-v-1-image: '../images/sprite.png';
+$shoki-scr-v-1: (2147px, 0px, -2147px, 0px, 239px, 424px, 2386px, 2242px, '../images/sprite.png', 'shoki_scr_v.1', );
+$shoki-scr-v-2-name: 'shoki_scr_v.2';
+$shoki-scr-v-2-x: 2147px;
+$shoki-scr-v-2-y: 424px;
+$shoki-scr-v-2-offset-x: -2147px;
+$shoki-scr-v-2-offset-y: -424px;
+$shoki-scr-v-2-width: 239px;
+$shoki-scr-v-2-height: 424px;
+$shoki-scr-v-2-total-width: 2386px;
+$shoki-scr-v-2-total-height: 2242px;
+$shoki-scr-v-2-image: '../images/sprite.png';
+$shoki-scr-v-2: (2147px, 424px, -2147px, -424px, 239px, 424px, 2386px, 2242px, '../images/sprite.png', 'shoki_scr_v.2', );
+$shoki-scr-v-3-name: 'shoki_scr_v.3';
+$shoki-scr-v-3-x: 2147px;
+$shoki-scr-v-3-y: 848px;
+$shoki-scr-v-3-offset-x: -2147px;
+$shoki-scr-v-3-offset-y: -848px;
+$shoki-scr-v-3-width: 239px;
+$shoki-scr-v-3-height: 424px;
+$shoki-scr-v-3-total-width: 2386px;
+$shoki-scr-v-3-total-height: 2242px;
+$shoki-scr-v-3-image: '../images/sprite.png';
+$shoki-scr-v-3: (2147px, 848px, -2147px, -848px, 239px, 424px, 2386px, 2242px, '../images/sprite.png', 'shoki_scr_v.3', );
+$shoki-scr-v-4-name: 'shoki_scr_v.4';
+$shoki-scr-v-4-x: 1908px;
+$shoki-scr-v-4-y: 0px;
+$shoki-scr-v-4-offset-x: -1908px;
+$shoki-scr-v-4-offset-y: 0px;
+$shoki-scr-v-4-width: 239px;
+$shoki-scr-v-4-height: 424px;
+$shoki-scr-v-4-total-width: 2386px;
+$shoki-scr-v-4-total-height: 2242px;
+$shoki-scr-v-4-image: '../images/sprite.png';
+$shoki-scr-v-4: (1908px, 0px, -1908px, 0px, 239px, 424px, 2386px, 2242px, '../images/sprite.png', 'shoki_scr_v.4', );
+$tablet-name: 'tablet';
+$tablet-x: 672px;
+$tablet-y: 0px;
+$tablet-offset-x: -672px;
+$tablet-offset-y: 0px;
+$tablet-width: 596px;
+$tablet-height: 654px;
+$tablet-total-width: 2386px;
+$tablet-total-height: 2242px;
+$tablet-image: '../images/sprite.png';
+$tablet: (672px, 0px, -672px, 0px, 596px, 654px, 2386px, 2242px, '../images/sprite.png', 'tablet', );
+$spritesheet-width: 2386px;
+$spritesheet-height: 2242px;
+$spritesheet-image: '../images/sprite.png';
+$spritesheet-sprites: ($i-phone-7-1-11, $i-phone-7-1-2, $i-phone-7-1-22, $i-phone-7-shoki-v-1-01, $keyboard, $laptop-open, $mobile-black, $mobile-white, $notebook-open, $notebook-open-clear, $pen, $pencil-2, $scr1, $scr2, $scr3, $shoki-scr-v-1, $shoki-scr-v-2, $shoki-scr-v-3, $shoki-scr-v-4, $tablet, );
+$spritesheet: (2386px, 2242px, '../images/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

@@ -1,0 +1,75 @@
+.btn.next {
+  background: url(../img/right-arrow.png) no-repeat;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  right: 0;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+.btn.next:active {
+  box-shadow: none;
+}
+
+.btn.prev {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: rotate(180deg);
+  background: url(../img/right-arrow.png) no-repeat;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.owl-dots {
+    height: 0 !important;
+  }
+
+.reviews-item {
+  display: flex;
+  justify-content: center;
+
+  .reviews-author {
+    padding-right: 20px;
+  }
+
+  .reviews-author img {
+    background: red;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+
+  }
+  .reviews-descr p {
+    width: 400px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .author-name p {
+    padding-top: 10px;
+    margin-bottom: 0;
+    font-family: 'Open Sans', sans-serif;
+    text-align: right;
+  }
+}
+
+.owl-nav svg {
+  height: 30px;
+  width: 30px;
+}
+
+.owl-nav {
+  position: relative;
+  bottom: 150px;
+}
+
+.owl-nav .owl-next {
+  float: right;
+}
+
+.owl-nav .owl-prev {
+  float: left;  
+}

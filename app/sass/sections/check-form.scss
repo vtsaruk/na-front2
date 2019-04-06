@@ -1,0 +1,74 @@
+.check-form {
+	background: #151239;
+	font-family: 'Open Sans', sans-serif;
+
+	.container {
+		display: flex;
+		height: 700px;
+		
+		.cours-name {
+			padding: 90px 100px;
+			color: #fff;
+			width: 385px;
+			h2 {
+				font-family: 'Merriweather', serif;
+				font-size: 50px;
+				font-weight: lighter;
+				margin-bottom: 40px;
+			}
+			.description {
+				font-size: 16px;
+				margin-bottom: 45px;
+			}
+			a {
+				display: inline-block;
+				border: 1px solid #00bbd6;
+				padding: 10px 25px;
+				color: #fff;
+				font-size: 18px;
+				text-decoration: none;
+			}
+		}
+		form {
+			border-radius: 5px;
+			background: #fff;
+			width: 315px;
+			margin-top: 115px;
+			padding: 30px 25px;
+			margin-left: 215px;
+
+			.label-form {
+				text-align: center;
+				font-size: 24px;
+				color: #5a5a5a;
+				margin-bottom: 35px;
+			}
+
+			input {
+				height: 35px;
+				width: 295px;
+				font-size: 16px;
+				padding-left: 15px;
+				margin-bottom: 25px;
+			}
+			button {
+				width: 100%;
+				text-align: center;
+				background: #00bbd6;
+				color: #fff;
+				font-size: 18px;
+				padding: 14px;
+				margin-bottom: 18px;
+				border: 0;
+			}
+			button:hover {
+				background: #1f7099;
+				border: 1px solid #00bbd6;
+			}
+			.warning {
+				padding: 0 10px;
+				color: #585858;
+			}
+		}
+	}
+}

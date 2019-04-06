@@ -1,0 +1,53 @@
+.our-projects .wrapper {
+	display: flex;
+	font-family: 'Open Sans', sans-serif;
+
+
+	.col {
+		width: 50%;
+	}
+	.col.left {
+		padding-right: 70px; 
+	}
+	.col.right {
+		 
+	}
+	.photo {
+		width: 585px;
+		height: 400px;
+		background-size: cover;
+	}
+	.cell {
+		margin-bottom: 20px;
+		padding: 0 55px 0 20px;
+		border-left: 1px solid #fff;
+		p {
+			margin-top: 12px;
+		}
+	}
+	.cell.activ {
+		border-left: 1px solid #1e4ba5;	
+	}
+
+	h6 {
+		font-size: 21px;
+		margin: 0 0 14px 0;
+		font-weight: 200;
+		
+	}
+	.description {
+		font-size: 12px;
+		font-weight: 200;
+	}
+	.more {
+        color: #00bbd6;
+        text-decoration: none;
+    } 
+	.link-all-projects {
+		display: block;
+		padding-left: 20px;
+		text-decoration: none;
+		color: #151239;
+
+	}
+}

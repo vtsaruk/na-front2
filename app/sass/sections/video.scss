@@ -1,0 +1,45 @@
+.video {
+	
+	position: relative;
+	font-family: 'Open Sans', sans-serif;
+
+	video {
+		opacity: 0.5;
+		pointer-events: none;
+	}
+
+	.box {
+		padding-top: 140px;
+		width: 100%;
+		position: absolute;
+		text-align: center;
+		color: #004c46;
+		z-index: 5;
+	}
+
+	h1 {
+		font-size: 40px;
+		margin-top: 27px;
+		padding-bottom: 15px;
+		font-weight: lighter;
+		font-family: 'Merriweather', serif;
+	}
+
+	p {
+		// margin-top: 30px;
+		width: 380px;
+		font-size: 20px;
+		display: inline-block;
+	}
+
+	.invite {
+		display: inline-block;
+		margin-top: 45px;
+		border: 1px solid #004c46;
+		color: #004c46;
+		text-decoration: none;
+		padding: 15px 30px;
+		font-size: 18px;
+		font-weight: bold;
+	}
+}

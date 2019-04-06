@@ -1,0 +1,62 @@
+@import "../global/sprite.scss";
+header {
+    background: #1b473b;
+    padding-top: 25px;
+    height: 60px;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+
+    .vertic-line {
+      display: block;
+      float: left;
+      width: 2px;
+      height: 20px;
+      background-color: white;
+      margin-top: 11px;
+
+      }
+
+      .far.fa-angle-down {
+        font-size: 24px;
+      }
+      .box {
+        position: relative;
+        bottom: 5px;
+        float: right;
+      }
+      .box>div {
+        float: right;
+        min-width: 180px;
+        margin-top: 0px;
+        text-align: center;
+      }
+      .local-wraper {
+        //padding-top: 3px;
+        p {
+          margin-top: 0;
+          padding: 0 10px;
+          font-size: 18px;
+        }
+        .dropdown {
+          margin: 0 10px;
+        }
+      }
+      .phone-wraper p {
+        font-size: 18px;
+        margin: 0;
+      }
+      .button-wraper {
+        .call-me {
+          font-size: 16px;
+          padding: 10px 20px 12px 20px;
+          border-radius: 6px;
+          margin-left: 30px;
+
+          .fas.fa-mobile-alt {
+            font-size: 18px;
+            padding-right: 8px;
+          }
+        }
+      }
+
+    }
