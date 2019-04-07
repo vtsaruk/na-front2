@@ -39,15 +39,28 @@ header {
         p {
           margin-top: 0;
           padding: 0 10px;
+          padding-top: 7px;
           font-size: 18px;
         }
         .dropdown {
           margin: 0 10px;
         }
+        .list-city {
+          position: absolute;
+          z-index: 100;
+          padding: 7px 0;
+          left: 6px;
+          width: 200px;
+          display: none;
+          list-style: none;
+          background: #fff;
+          color: #1b473b;
+        }
       }
       .phone-wraper p {
         font-size: 18px;
         margin: 0;
+        margin-top: 10px;
       }
       .button-wraper {
         .call-me {

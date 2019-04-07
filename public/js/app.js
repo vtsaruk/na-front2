@@ -13,7 +13,6 @@ $(document).ready(function() {
         itemsTablet: [768, 1], //2 items between 600 and 0
         itemsMobile: false // itemsMobile disabled - inherit from itemsTablet option
     });
-    
 
     // Custom Navigation Events
     $('.next').click(function() {
@@ -26,10 +25,22 @@ $(document).ready(function() {
     //mobile gamburger
     //$("#respMenu").aceResponsiveMenu();
 
-
-    $("#respMenu").aceResponsiveMenu({
-        resizeWidth: '768', // Set the same in Media query       
+    $('#respMenu').aceResponsiveMenu({
+        resizeWidth: '768', // Set the same in Media query
         animationSpeed: 'medium', //slow, medium, fast
-        accoridonExpAll: false   //Expands all the accordion menu on click
+        accoridonExpAll: false //Expands all the accordion menu on click
+    });
+    $('.toggle-list-city').click(function() {
+        $('.list-city').toggle();
+    });
+
+    $('.list-city li').click(function(e) {
+        var listPhone = e.target.dataset.phone.split(';');
+        $('.list-phone').html('');
+        $('.name-city').text(e.target.innerText);
+        listPhone.forEach(function(phone) {
+            $('.phone-wraper div').append('<p>' + phone + '</p>');
+        });
+        $('.list-city').toggle();
     });
 });
