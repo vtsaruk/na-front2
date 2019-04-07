@@ -2,12 +2,11 @@
   text-align: center;
   font-family: "Open Sans", sans-serif;
   .responsive-menu {
-   &_one {
-    position: relative;
-   }
+   > li {
+      position: relative;
+    }
     .level_two {
-      position: absolute;
-      z-index: 2;
+      display: none;
       > li {
         width: 450px;
         background-color: #fff;
@@ -17,6 +16,17 @@
         }
       }
     }
+    .level_free {
+      display: none;
+      > li {
+        width: 450px;
+        background-color: #fff;
+        display: block;
+        > a {
+          text-align: left;
+        }
+      }
+    } 
   }
   ul {
     padding: 0;
