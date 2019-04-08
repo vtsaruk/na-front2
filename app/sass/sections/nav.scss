@@ -1,8 +1,20 @@
 .nav-area {
   text-align: center;
   font-family: "Open Sans", sans-serif;
+
   .responsive-menu {
-   > li {
+    display: none;
+  }
+
+  .desctopMenu {
+    display: inline-block;
+
+    ul {
+      display: none; // добавить стили для выподающего списка в десктоп.
+    }
+  }
+  .responsive-menu {
+    > li {
       position: relative;
     }
     .level_two {
@@ -26,7 +38,7 @@
           text-align: left;
         }
       }
-    } 
+    }
   }
   ul {
     padding: 0;

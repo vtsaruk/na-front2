@@ -11,7 +11,7 @@ $(document).ready(function() {
         itemsDesktop: [992, 2], //5 items between 1000px and 901px
         itemsDesktopSmall: [992, 1], // betweem 900px and 601px
         itemsTablet: [768, 1], //2 items between 600 and 0
-        itemsMobile: false // itemsMobile disabled - inherit from itemsTablet option
+        itemsMobile: 1 // itemsMobile disabled - inherit from itemsTablet option
     });
 
     // Custom Navigation Events
@@ -30,6 +30,7 @@ $(document).ready(function() {
         animationSpeed: 'medium', //slow, medium, fast
         accoridonExpAll: false //Expands all the accordion menu on click
     });
+    
     $('.toggle-list-city').click(function() {
         $('.list-city').toggle();
     });

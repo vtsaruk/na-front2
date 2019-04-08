@@ -20,48 +20,118 @@
 }
 
 @media (max-width: 767px) {
-  .activity {
-    height: 0;
-  }
+ .activity {
+        height: 0;
+    }
+ 
   header {
     width: 100%;
     height: 50px;
     .container {
-      width: 100%; 
+      width: 100%;
       margin: 0 auto;
     }
-  }
-  .container {
-    padding-left: 20px;
-  }
-  .box {
-    display: none;
-  }
-  .arrow {
-      position: absolute;
-      right: 7%;
-      top: 36%;
-    font-family: FontAwesome;
-    content: "\f107";
-    &:before {
-      text-align: right;
-      display: inline;
-      font-size: 16px;
-      font-family: FontAwesome;
-      height: auto;
-      content: "\f105";
-      font-weight: 300;
-      text-shadow: none;
-      width: 10px;
-      display: inline-block;
+    .phone-wraper {
+      display: none;
+    }
+    .local-wraper {
+      display: none;
     }
   }
+
+  .activity {
+    display: grid;
+    height: auto;
+    width: 100%;
+   
+    grid-template-columns: 100%;
+
+    .container {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 1fr 1fr 1fr;
+      width: 100%;
+      height: auto;
+      padding: 0;
+
+      .col {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        .descript {
+          padding: 15px 32px;
+          .more {
+            margin-top: 24px;
+            padding: 16px;
+            border: 1px solid #00bbd6;
+            display: block;
+            text-align: center;
+            position: relative;
+
+            > img {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .check-form {
+    width: 100%;
+    height: auto;
+    > .container {
+      display: grid;
+      grid-template-columns: 100%;
+      height: 900px;
+      form {
+        margin: 0;
+      }
+      .cours-name {
+        padding: 0;
+        > h2 {
+          font-size: 56px;
+          line-height: normal;
+          text-transform: uppercase;
+          > p {
+            font-size: 16px;    
+          }
+        }
+      }
+    }
+  }
+
   .video {
     display: none;
   }
 
   .nav-area {
     position: relative;
+
+    .desctopMenu {
+        display: none;
+      }
+
+    .arrow {
+      position: absolute;
+      right: 7%;
+      top: 36%;
+      font-family: FontAwesome;
+      content: "\f107";
+      &:before {
+        text-align: right;
+        display: inline;
+        font-size: 16px;
+        font-family: FontAwesome;
+        height: auto;
+        content: "\f105";
+        font-weight: 300;
+        text-shadow: none;
+        width: 10px;
+        display: inline-block;
+      }
+    }
 
     .menu-toggle {
       position: absolute;
@@ -79,7 +149,7 @@
       text-align: left;
 
       > a {
-          position: relative;
+        position: relative;
         text-align: left;
         padding: 15px 10px;
         border-bottom: 1px solid #cccccc;
