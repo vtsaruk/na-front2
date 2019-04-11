@@ -20,16 +20,19 @@
 }
 
 @media (max-width: 767px) {
- .activity {
-        height: 0;
-    }
- 
+  .activity {
+    height: 0;
+  }
+
   header {
     width: 100%;
     height: 50px;
     .container {
       width: 100%;
       margin: 0 auto;
+      .logo {
+        margin-left: 20px;
+      }
     }
     .phone-wraper {
       display: none;
@@ -43,7 +46,7 @@
     display: grid;
     height: auto;
     width: 100%;
-   
+
     grid-template-columns: 100%;
 
     .container {
@@ -84,19 +87,44 @@
     > .container {
       display: grid;
       grid-template-columns: 100%;
-      height: 900px;
-      form {
-        margin: 0;
-      }
+      height: 100%;
       .cours-name {
+        position: relative;
+        width: 100%;
         padding: 0;
         > h2 {
-          font-size: 56px;
+          padding: 40px 32px 32px 32px;
+          font-size: 48px;
           line-height: normal;
+          margin: 0;
           text-transform: uppercase;
-          > p {
-            font-size: 16px;    
+        }
+        > p {
+          font-size: 16px;
+          line-height: 27px;
+          padding: 0 32px;
+        }
+        .more {
+          margin: 22px 32px 72px 32px;
+          padding: 16px;
+          border: 2px solid #01BBD6;
+          display: block;
+          text-align: center;
+          position: relative;
+          font-size: 18px;
+
+          > img {
+            margin-left: 10px;
           }
+     
+        }
+      }
+       form {
+        margin: 0 24px 70px 24px;
+        width: auto;
+
+        input {
+          width: 90%;
         }
       }
     }
@@ -110,8 +138,8 @@
     position: relative;
 
     .desctopMenu {
-        display: none;
-      }
+      display: none;
+    }
 
     .arrow {
       position: absolute;
@@ -177,6 +205,7 @@
         display: none;
         position: relative;
         > li {
+          height: 53px;
           display: block;
           text-align: left;
           background-color: rgb(250, 242, 242);
