@@ -1,20 +1,8 @@
 .nav-area {
   text-align: center;
   font-family: "Open Sans", sans-serif;
-
   .responsive-menu {
-    display: none;
-  }
-
-  .desctopMenu {
-    display: inline-block;
-
-    ul {
-      display: none; // добавить стили для выподающего списка в десктоп.
-    }
-  }
-  .responsive-menu {
-    > li {
+   > li {
       position: relative;
     }
     .level_two {
@@ -38,7 +26,7 @@
           text-align: left;
         }
       }
-    }
+    } 
   }
   ul {
     padding: 0;
@@ -59,6 +47,122 @@
     a:hover {
       background: #48beb7;
       color: white;
+    }
+  }
+}
+@media (min-width: 768px) {
+  #respMenu {
+    display: none;
+  }
+  .submenu {
+    display: none;
+    background: #fff;
+    position: absolute;
+    z-index: 100;
+    li {
+      display: block;
+    }
+    .submenu li a {
+      text-align: left;
+      
+    }
+  }
+  .destop-nav-menu {
+    display: inline-block;
+    
+    .submenu li a {
+      text-align: left;
+      padding: 20px 30px;
+    }
+  }
+  .destop-nav-menu li:hover .submenu {
+    display: block;
+  }
+  .destop-nav-menu .submenu:hover {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .destop-nav-menu {
+    display: none;
+  }
+  .arrow {
+      position: absolute;
+      right: 7%;
+      top: 36%;
+    font-family: FontAwesome;
+    content: "\f107";
+    &:before {
+      text-align: right;
+      display: inline;
+      font-size: 16px;
+      font-family: FontAwesome;
+      height: auto;
+      content: "\f105";
+      font-weight: 300;
+      text-shadow: none;
+      width: 10px;
+      display: inline-block;
+    }
+  }
+  .nav-area {
+    position: relative;
+
+    .menu-toggle {
+      position: absolute;
+      top: -65px;
+      background: none;
+
+      #menu-btn {
+        background: #1b473b;
+        border: none;
+      }
+    }
+    ul > li {
+      display: block;
+      text-align: left;
+
+      > a {
+          position: relative;
+        text-align: left;
+        padding: 15px 10px;
+        border-bottom: 1px solid #cccccc;
+      }
+    }
+    .responsive-menu {
+      display: none;
+      .level_two {
+        display: none;
+        position: relative;
+
+        > li {
+          width: 100%;
+          display: block;
+          text-align: left;
+          background-color: rgb(250, 242, 242);
+
+          > a {
+            position: relative;
+            padding-left: 50px;
+          }
+        }
+      }
+      .level_free {
+        display: none;
+        position: relative;
+        > li {
+          display: block;
+          text-align: left;
+          background-color: rgb(250, 242, 242);
+          > a {
+            padding-left: 50px;
+          }
+        }
+      }
+      .firstItem {
+        border-top: 2px solid #1b473b;
+      }
     }
   }
 }

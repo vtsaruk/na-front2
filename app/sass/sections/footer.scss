@@ -1,8 +1,13 @@
 footer {
 	background: #262626;
 	color: #fff;
-	padding: 63px;
 	font-family: 'Open Sans', sans-serif;
+	width: 100%;
+	padding: 63px 0 0 0;
+
+	.mob-social-list {
+		display: none;
+	}
 
 	.wrapper {
 		display: flex;
@@ -10,13 +15,8 @@ footer {
 	}
 
 	.col {
+		width: 20%;
 		padding-top: 10px;
-	}
-
-	.col:nth-child(2), .col:last-child  {
-		border-left: 1px solid #464646;
-		padding-left: 30px;
-		height: 225px;
 	}
 
 	h6 {
@@ -36,9 +36,9 @@ footer {
 		display: block;
 		padding: 6px 0;
 	}
-	button {
+	.choose-country {
 		background: #363636;
-		width: 200px;
+		width: 100%;
 		cursor: pointer;
 		padding: 13px 0 13px 10px;
 		border: 1px solid #b7b7b7;
@@ -56,11 +56,10 @@ footer {
 			float: right;
 		}
 	}
+
 	.lang {
 		display: block;
 		height: 70px;
-		margin: 20px;
-		margin-top:30px;
 	}
 
 	.social-network {
@@ -89,9 +88,194 @@ footer {
 		background: url('../../images/icons/footer-youtube.svg') no-repeat;
 		padding: 0 0 15px;
 		height: 30px;
-		width: 30px;
-		
+		width: 30px;		
 	}
 
+	.wrapper-country {
+		position: relative;
+	}
 
+	.wrapper-country ul {
+		display: none;
+		position: absolute;
+		margin: 0;
+		height: 200px;
+
+		li {
+			background: #b7b7b7;
+			text-align: center;
+			width: 200px;
+		}
+
+		li:hover {
+			background: #fff;
+		}
+
+		a {
+			color: #363636;
+		}
+	}
+
+	.pay {
+		display: block;
+		float: left;
+		padding: 10px 25px;
+		text-align: center;
+		background: rgba(196, 196, 196, 0.4);
+		color: #fff;
+	}
+
+	.contribution {
+		display: none;
+	}
+}
+
+@media (min-width: 992px) {
+	footer {
+
+		.col:nth-child(2), .col:last-child  {
+			border-left: 1px solid #464646;
+			padding-left: 30px;
+		}
+
+		.lang {
+			margin: 20px;
+			margin-top:30px;
+		}
+
+		.wrapper {
+			margin-bottom: 50px;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	footer {
+		text-align: center;
+		padding: 0;
+
+		.container {
+			width: 100%;
+		}
+
+		.container > p {
+			min-height: 60px;
+			padding: 20px 30px;
+		}
+
+		.contribution {
+			display: block;
+		}
+
+		.mob-social-list {
+			display: block
+		}
+
+		.wrapper {
+			flex-direction: column;
+		}
+		.choose-country {
+			width: 200px;
+		}
+
+		.col {
+			width: 100%;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+			cursor: pointer;
+			background:#262626;
+		}
+		.col:first-child .pay {
+			display: none;
+		}
+		
+		.col ul {
+			//display: none;
+		}
+
+		.col .lang {
+			display: none;
+		}
+
+		.col:last-child {
+			display: flex;
+			text-align: left;
+
+			h6 {
+				margin-bottom: 20px;
+			}
+
+			& > div {
+				width: 50%;
+				padding: 35px 0;
+			}
+
+			& > div > ul {
+				display: block;	
+			}
+		}
+
+		.into-world ul {
+			margin: 0;
+		}
+
+		.into-world .social-network {
+			display: none;
+		}
+
+		.mob-social-list {
+			padding-left: 30px !important;
+		}
+
+		.social-network {
+			margin: 0;
+			
+			a {
+				height: 53px;
+				width: 53px;
+			}
+			a:first-child{
+				margin-left: 0;
+			}
+		}
+
+		.social-network .youtube {
+			padding: 0 0 19px;
+			height: 45px;
+			width: 45px;		
+		}
+		
+
+		.col ul.active {
+			display: block;
+		}
+
+		.lang {
+			display: inline-block;
+		}
+
+		.container > p {
+			.pay {
+				margin-top: 10px
+			}
+
+			.exit {
+				margin-top: 20px;
+			}
+	
+			.time-update {
+				margin-top: 10px;
+				display: block;
+				text-align: center;
+			}			
+		}
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	footer {
+		.pay {
+			padding: 7px 15px;
+			float: none;
+		}
+	}
 }
