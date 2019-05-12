@@ -98,16 +98,37 @@ header {
     }
     .search-2.active {
         display: block;
-    } 
-}
+    }
+    .box>div.search {
+      min-width: 50px;
+    }
 
-#input-search {
-  margin: 7px 0 0 15px;
-  width: 200px;
-  padding: 3px 10px;
-  font-size: 16px;
-}
+    #input-search-2 {
+      width: 200px;
+      padding: 3px 10px;
+      font-size: 16px;
+    }
+    .search-2 {
+      display: none;
+      float: right;
+      position: relative;
 
+      .svg-img-search {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+      }
+    }
+
+    .search-2.active {
+      display: block;
+    }
+
+    .search label {
+      right: 0;
+      top: 10px;
+    }
+}
 
 @media (max-width: 767px) {
   header {
