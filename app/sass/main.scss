@@ -1,5 +1,6 @@
 // font-family: 'Merriweather', serif;
 // font-family: 'Open Sans', sans-serif;
+@import "global/variables.scss";
 @import "global/ace-responsive-menu";
 @import "global/sprite";
 @import "sections/header";
@@ -10,6 +11,7 @@
 @import "sections/footer";
 @import "sections/our-projects";
 @import "sections/world-news";
+@import "sections/mobile-world-news";
 @import "sections/caurosel";
 @import "sections/video";
 
@@ -21,12 +23,12 @@
 
 .more {
     padding: 16px 0;
-    border: 1px solid #00bbd6;
+    border: 1px solid var(--link-active-more-color);
     display: inline-block;
     width: 230px;
     text-align: center;
     position: relative;
-    color: #00bbd6;
+    color:  var(--link-active-more-color);
     cursor: pointer;
 
     > img {
@@ -34,8 +36,12 @@
   }
 }
 .more:hover {
-  color: #1f7099;
-  border: 1px solid #1f7099;
+  color: var(--link-active-more-color);
+  border: 1px solid var(--link-active-more-color);
+}
+
+.container {
+  padding: 60px 0;
 }
 
 @media (max-width: 767px) {
@@ -73,6 +79,7 @@
 	  width: 750px;
 	  margin: 0 auto;
   }
+
   .more {
     width: 100%;
   }
@@ -93,7 +100,7 @@
 }
 
 .h3-header {
-  padding: 60px 0 40px 0;
+  padding-bottom: 40px;
   text-align: center;
   text-transform: uppercase;
   color: #677278;
@@ -109,3 +116,7 @@
 object.dropdown {
   margin-left: 10px;
 }
+
+/*.more::after {
+  content: ' \2799';
+}*/

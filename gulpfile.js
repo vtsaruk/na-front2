@@ -7,6 +7,7 @@ const sass = require('gulp-sass');
 const runSequence = require('run-sequence').use(gulp);
 const spritesmith = require('gulp.spritesmith');
 const rename = require('gulp-rename');
+var postcss = require('gulp-postcss');
 
 /* -------- Server  -------- */
 gulp.task('server', function() {
@@ -26,6 +27,7 @@ gulp.task('css:compile', function() {
         .src('app/sass/main.scss')
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(rename('main.min.css'))
+        .pipe(postcss())
         .pipe(gulp.dest('public/css'));
 });
 
@@ -64,7 +66,7 @@ gulp.task('build', function(callback) {
     runSequence(
         'clean',
         ['css:compile', 'html', 'copy:fonts', 'copy:images', 'browserify'],
-        'reload-browser', 
+        'reload-browser',
         callback
     );
 });
@@ -76,7 +78,7 @@ gulp.task('reload-browser', function() {
 
 /* ------------ JS compile ------------- */
 gulp.task('browserify', function() {
-    return gulp.src('app/js/*').pipe(gulp.dest('public/js/'))
+    return gulp.src('app/js/*').pipe(gulp.dest('public/js/'));
 });
 
 /* ------------ Delete ------------- */

@@ -24,14 +24,15 @@
 		p {
 			margin-top: 12px;
 		}
+
 		a {
-			color: #00bbd6;
+			color: var(--link-active-more-color);
 			text-decoration: none;
 		}
 	}
 
 	.cell.activ {
-		border-left: 1px solid #1e4ba5;	
+		border-left: 1px solid  var(--link-active-more-color);	
 	}
 
 	h6 {
@@ -47,7 +48,7 @@
 	}
 
 	.more {
-        color: #00bbd6;
+        color: var(--link-active-more-color);
         text-decoration: none;
 	}
 	 
@@ -87,6 +88,7 @@
 @media (min-width: 768px) and (max-width: 992px) {
 	.our-projects .wrapper {
 		flex-direction: column-reverse;
+
 		.col.left {
 			padding-right: 0;
 		}
@@ -100,6 +102,7 @@
 			width: 100%;
 			text-align: center;
 		}
+
 		.link-all-projects {
 			display: none;
 		}
@@ -122,9 +125,14 @@
 	
 @media (max-width: 767px) {
 	.our-projects .wrapper {
+		h3.h3-header {
+			padding-bottom: 0 !important;
+		}
+
 		.wrapper-line {
 			padding: 0 15px;
 		}
+
 		.line {
 			height: 1px;
 			background: #C4C4C4;
@@ -132,9 +140,11 @@
 		
 		.col {
 			width: 100%;
+
 			&.left {
 				display: none;
 			}
+
 			.cell {
 				padding: 10px 0;
 				margin: 0;
@@ -146,12 +156,13 @@
 				h6 {
 					margin: 15px 0 0 0;
 					padding-left: 25px;
-					color: #48BEB7;
+					color: var(--link-active-more-color);
 				}
 
 				p {
 					display: none;
 				}
+
 				.text {
 					display: block;
 					padding: 0 25px;
@@ -163,7 +174,7 @@
 					margin-top: 25px;
 					width: 375px;
 					display: block;
-					border: 1px solid #48BEB7;
+					border: 1px solid var(--link-active-more-color);
 					text-align: center;
 					font-family: Open Sans;
 					font-style: normal;
@@ -179,12 +190,12 @@
 			position: relative;
 
 		   &::after {
-			content: ''; 
-			position: absolute;
-			right: 30px;
-			top: 35px;
-			border: 10px solid transparent;
-			border-top: 10px solid #48BEB7;
+				content: ''; 
+				position: absolute;
+				right: 30px;
+				top: 35px;
+				border: 10px solid transparent;
+				border-top: 10px solid var(--link-active-more-color);
 		   }
 		}
 
@@ -192,12 +203,12 @@
 			position: relative;
 		
 		   &::after {
-			content: ''; 
-			position: absolute;
-			right: 30px;
-			top: 32px;
-			border: 10px solid transparent;
-			border-left: 10px solid #48BEB7;
+				content: ''; 
+				position: absolute;
+				right: 30px;
+				top: 32px;
+				border: 10px solid transparent;
+				border-left: 10px solid var(--link-active-more-color);
 		   }
 		}
 
@@ -214,5 +225,21 @@
 				object-fit: cover;
 			}
 		}
+
+		.link-all-projects {
+			display: none;
+		}
+		
+		.link-all-projects-2 {
+			margin-top: 30px;
+			display: inline-block;
+			font-size: 18px;
+			width: 270px;
+		}
+
+		.more {
+			width: 270px;
+		}
 	}
+
 }

@@ -65,6 +65,7 @@
     width: 450px;
     font-family: 'Open Sans', sans-serif;
   }
+  
   .author-name p {
     padding-top: 10px;
     margin-bottom: 0;
@@ -80,7 +81,7 @@
 
 .owl-nav {
   position: relative;
-  bottom: 200px;
+  bottom: 150px;
 }
 
 .owl-nav .owl-next {
@@ -175,12 +176,8 @@
           display: none;
         }
 
-      .item {
-        margin-bottom: 60px;
-      }
-        
       .reviews-item {
-        height: 350px;
+        min-height: 270px;
         padding: 0 50px;
         flex-direction: column-reverse;
         justify-content: space-between;
@@ -204,7 +201,6 @@
       }
       
       .photo {
-        margin: 20px 0;
         align-self: center;
       }
       

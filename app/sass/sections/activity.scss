@@ -1,7 +1,6 @@
 .activity .container {
     display: flex;
   	justify-content: space-between;
-  	padding: 26px 0 50px 0;
 	font-family: 'Open Sans', sans-serif;
 	padding-bottom: 90px 0 100px 0;  
 
@@ -58,10 +57,6 @@
         	width: 100%;
         	color: #fff;
 
-        	img {
-        		margin-top: 30px;
-			}
-			
         	&>div {
         		align-content: flex-end;
         
@@ -70,6 +65,11 @@
 					width: 100%;
         		}
         	}
+		}
+
+		.icon-logo {
+			width: 140px;
+			margin-top: 30px;
 		}
 		
         .cover {
@@ -116,7 +116,16 @@
 @media (min-width: 768px) and (max-width: 992px) {
 	.activity .container {
 		.col {
-			width: 240px;
+			width: 210px;
+
+			.header, .cover-2, .cover  {
+				height: 136px;
+			}
+
+			.icon-logo {
+				width: 100px;
+				margin-top: 18px;
+			}
 		}
 		
 	}

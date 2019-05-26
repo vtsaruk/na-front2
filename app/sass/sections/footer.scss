@@ -3,7 +3,6 @@ footer {
 	color: #fff;
 	font-family: 'Open Sans', sans-serif;
 	width: 100%;
-	padding: 63px 0 0 0;
 
 	.mob-social-list {
 		display: none;
@@ -32,18 +31,24 @@ footer {
 	a {
 		text-decoration: none;
 		color: #ababab;
-		font-size: 16px;
 		display: block;
 		padding: 6px 0;
 	}
 	.choose-country {
 		background: #363636;
 		width: 100%;
+		text-align: left;
 		cursor: pointer;
 		padding: 13px 0 13px 10px;
 		border: 1px solid #b7b7b7;
 		color: #ababab;
 		font-size: 16px;
+
+		object.dropdown {
+			display: inline-block;
+			float: right;
+			margin-right: 10px;
+		}
 	}
 	p {
 		border-top: 1px solid #464646;
@@ -55,6 +60,20 @@ footer {
 			display: block;
 			float: right;
 		}
+		.exit::after {
+			color:#fff;
+		}
+	}
+	.cell-exit {
+		margin: 10px 0 20px 0;
+	}
+	.exit {
+		display: inline-block;
+	}
+
+	.exit::after {
+		content: ' \2192';
+		color:#ababab;
 	}
 
 	.lang {
@@ -74,6 +93,10 @@ footer {
 		height: 35px;
 		width: 35px;
 		margin-left: 10px;
+
+		&:first-child{
+			margin-left: 0;
+		}
 	}
 
 	.social-network .fb {
@@ -135,6 +158,8 @@ footer {
 
 		.col:nth-child(2), .col:last-child  {
 			border-left: 1px solid #464646;
+		}
+		.col:nth-child(2) {
 			padding-left: 30px;
 		}
 
@@ -146,6 +171,21 @@ footer {
 		.wrapper {
 			margin-bottom: 50px;
 		}
+
+		.into-world {
+			padding-left: 30px;
+		}
+	}
+}
+
+@media (max-width: 482px) {
+	footer {
+		.choose-country {
+			width: 160px!important;
+		}
+	}
+	footer .wrapper-country ul li {
+		width: 160px !important;
 	}
 }
 
@@ -156,6 +196,11 @@ footer {
 
 		.container {
 			width: 100%;
+			padding: 0 0 60px 0;
+		}
+
+		.beefup__body a {
+			padding: 20px;
 		}
 
 		.container > p {
@@ -232,9 +277,6 @@ footer {
 			a {
 				height: 53px;
 				width: 53px;
-			}
-			a:first-child{
-				margin-left: 0;
 			}
 		}
 

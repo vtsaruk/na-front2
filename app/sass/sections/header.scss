@@ -1,11 +1,15 @@
 @import "../global/sprite.scss";
 header {
-    background: #1b473b;
-    padding-top: 25px;
-    height: 60px;
-    color: #fff;
-    font-family: 'Open Sans', sans-serif;
-
+  background: #1b473b;
+  padding-top: 25px;
+  height: 60px;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  
+    .container {
+      padding: 0;
+    }
+    
     .logo {
       width: 250px;
     }
@@ -60,6 +64,16 @@ header {
           li {
             padding: 10px 20px;
 
+          }
+
+          li:hover {
+            background: #48beb7;
+            color: white;
+          }
+
+          li:last-child {
+
+            padding-bottom: 20px;
           }
         }
       }

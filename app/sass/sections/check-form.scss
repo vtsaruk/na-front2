@@ -26,7 +26,7 @@
 
 			a {
 				display: inline-block;
-				border: 1px solid #00bbd6;
+				border: 1px solid var(--link-active-more-color);
 				padding: 10px 25px;
 				color: #fff;
 				font-size: 18px;
@@ -61,12 +61,13 @@
 				width: 313px;
 				height: 40px;
 				background: #fff;
+				color: #5a5a5a;
 			}
 
 			.submit {
 				width: 100%;
 				text-align: center;
-				background: #00bbd6;
+				background: var(--link-active-more-color);
 				color: #fff;
 				font-size: 18px;
 				padding: 14px;
@@ -101,6 +102,11 @@
 		}
 		form {
 			margin-left: 0;
+
+			.confirm {
+				height: 20px;
+				width: 20px;
+			}
 		}
 	}
   }
@@ -113,6 +119,22 @@
 	}
 }
 
+@media (max-width: 482px) {
+	.check-form .container {
+		form {
+			width: 270px;
+		}
+
+		input[type="text"] {
+			width: 250px !important;
+			border: 1px solid rgb(169, 169, 169);
+		}
+
+		select {
+			width: 270px !important;
+		}
+	}
+}
 @media (max-width: 767px) {
 	.check-form {
 		.container {
@@ -139,6 +161,11 @@
 				form {
 					margin: 40px auto;
 					margin-bottom: 0;
+
+					.confirm {
+						height: 20px;
+						width: 20px;
+					}
 				}
 			}
 			
