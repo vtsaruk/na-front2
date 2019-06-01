@@ -1,11 +1,11 @@
-.video {
-	
+.video {	
 	position: relative;
 	font-family: 'Open Sans', sans-serif;
 
 	video {
 		opacity: 0.5;
 		pointer-events: none;
+		//height: calc(100vh - 165px);
 	}
 
 	.box {
@@ -46,5 +46,27 @@
 		background: #48beb7;
 		color: #fff;
 		border: 1px solid #48beb7;
+	}
+}
+
+@media (max-width: 767px) {
+	.video {
+		height: calc(100vh - 85px);
+		//height: 500px;
+		background: url('../../images/videe_img');
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		h1 {
+			height: 30px;
+		}
+
+		p {
+			width: 100%;
+		}
+
+		video {
+			display: none;
+		}
 	}
 }

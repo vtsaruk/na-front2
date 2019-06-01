@@ -13,7 +13,7 @@ var postcss = require('gulp-postcss');
 gulp.task('server', function() {
     browserSync.init({
         server: {
-            port: 9000,
+            port: 3030,
             baseDir: 'public'
         }
     });

@@ -40,7 +40,7 @@ var carousel = function() {
 
 var mobGamburger = function() {
     $('#respMenu').aceResponsiveMenu({
-        resizeWidth: '768', // Set the same in Media query
+        resizeWidth: '767', // Set the same in Media query
         animationSpeed: 'medium', //slow, medium, fast
         accoridonExpAll: false //Expands all the accordion menu on click
     });
@@ -108,6 +108,11 @@ var accordionOurProjects = function() {
     }
     if (window.innerWidth > 767 && window.innerWidth < 993) {
         sliceText('.our-projects .cell .text', 200);
+    } else {
+        sliceText('.our-projects .cell .text', 110);
+    }
+
+    if (window.innerWidth > 767) {
         $('.search .svg-img-search').click(function() {
             $('header .box').hide();
             setTimeout(function() {
@@ -121,14 +126,6 @@ var accordionOurProjects = function() {
             }, 0);
             $('header .search-2').addClass('active');
         });
-        $('.search-2 .svg-img-search').click(function() {
-            // search request
-        });
-    } else {
-        sliceText('.our-projects .cell .text', 110);
-    }
-
-    if (window.innerWidth > 767) {
         let prodjects = document.querySelectorAll('.our-projects .col.right .cell');
         let intervalCount = 0;
         intervalOurProjects = setInterval(() => {
