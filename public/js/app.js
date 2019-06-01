@@ -157,6 +157,10 @@ var accordionOurProjects = function() {
     });
 };
 
+// document.addEventListener('gesturestart', function (e) {
+//     e.preventDefault();
+// });
+
 $(document).ready(function() {
     $('.mobile.world-news .slider').slick({
         centerMode: true,
