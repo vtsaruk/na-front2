@@ -2,6 +2,15 @@
 	display: flex;
 	font-family: 'Open Sans', sans-serif;
 
+	.more:hover {
+		background: var(--link-active-more-color);
+		color: #fff;
+		
+		.a {
+			fill: #fff;
+		}
+	}
+
 	.col {
 		width: 50%;
 	}
@@ -131,20 +140,35 @@
 			width: 100%;
 
 			&.left {
-				display: none;
+				 display: none;
 			}
 
 			.cell {
 				padding: 10px 0;
 				margin: 0;
+				background-image: url(../../images/icons/dropdown-blue.png);
+				background-position: calc(100% - 20px) 35px;
+				background-repeat: no-repeat;
+				background-size: 20px;
 
-				&.activ {
-					display: none;
+				&.is-open {
+					background-image: url(../../images/icons/dropright-blue.png);
+					background-size: 12px;
+					background-position: calc(100% - 20px) 33px;
+
+					img.hide {
+						display: block;
+						height: 300px;
+						width: 100%;
+						margin: 30px 0 20px 0;
+						object-fit: cover;
+					}
 				}
 
 				h6 {
 					margin: 15px 0 0 0;
 					padding-left: 25px;
+					padding-right: 37px;
 					color: var(--link-active-more-color);
 				}
 
@@ -152,16 +176,21 @@
 					display: none;
 				}
 
+				.box-text {
+					padding: 0 20px;
+					display: block;
+				}
+
 				.text {
 					display: block;
-					padding: 0 25px;
+					padding: 0;
 					width: 100%;
 				}
 				
 				.see-more {
 					margin: 15px auto;
 					margin-top: 25px;
-					width: 375px;
+					width: 272px;
 					display: block;
 					border: 1px solid var(--link-active-more-color);
 					text-align: center;
@@ -174,47 +203,7 @@
 				}
 			}	
 		}
-
-		.cell.down {
-			position: relative;
-
-		   &::after {
-				content: ''; 
-				position: absolute;
-				right: 30px;
-				top: 35px;
-				border: 10px solid transparent;
-				border-top: 10px solid var(--link-active-more-color);
-		   }
-		}
-
-		.cell.left {
-			position: relative;
 		
-		   &::after {
-				content: ''; 
-				position: absolute;
-				right: 30px;
-				top: 32px;
-				border: 10px solid transparent;
-				border-left: 10px solid var(--link-active-more-color);
-		   }
-		}
-
-		.cell.down {
-			p {
-				display: block;
-			}
-
-			img.hide {
-				display: block;
-				height: 300px;
-				width: 100%;
-				margin: 30px 0 20px 0;
-				object-fit: cover;
-			}
-		}
-
 		.link-all-projects {
 			width: 272px;
 			display: block;

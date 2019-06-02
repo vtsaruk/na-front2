@@ -78,7 +78,7 @@ var chooseCountry = function() {
     });
 };
 
-var accordionFooter = function() {
+var createAccordions = function() {
     if (window.innerWidth < 993) {
         $('.accordion-footer').beefup({
             trigger: '.beefup__head', // String: Name of the trigger element
@@ -99,6 +99,28 @@ var accordionFooter = function() {
         });
     } else {
         $('.beefup__body').show();
+    }
+
+    if (window.innerWidth < 767) {
+        $('.our-projects .col.right .cell').beefup({
+            trigger: 'h6', // String: Name of the trigger element
+            content: 'p', // String: Name of the collapsible content
+            openClass: 'is-open', // String: Name of the class which shows if a accordion is triggered or not
+            animation: 'slide', // String: Set animation type to "slide", "fade" or leave empty ""
+            openSpeed: 200, // Integer: Set the speed of the open animation
+            closeSpeed: 200, // Integer: Set the speed of the close animation
+            scroll: false, // Boolean: Scroll to accordion
+            scrollSpeed: 400, // Integer: Set the speed of the scroll feature
+            scrollOffset: 0, // Integer: Additional offset to accordion position
+            openSingle: true, // Boolean: Open just one accordion at once
+            stayOpen: null, // Mixed: Leave one item open, accepts null, integer or string
+            selfBlock: false, // Boolean: Block close event on click
+            selfClose: false, // Boolean: Close on click outside
+            hash: true, // Boolean: Open accordion with id on hash change
+            breakpoints: null
+        });
+    } else {
+        $('.cell p').show();
     }
 };
 
@@ -143,23 +165,7 @@ var accordionOurProjects = function() {
             intervalCount = 0;
         }, 3000);
     }
-    $('.our-projects .cell').click(function(evt) {
-        var index = evt.target.dataset.index;
-        if (evt.target.className.indexOf('down') > 0) {
-            $('.our-projects .cell')[index].className = 'cell left';
-            return;
-        }
-        if (index) {
-            $('.our-projects .cell').each(function(i, elm) {
-                elm.className = i == index ? 'cell down' : 'cell left';
-            });
-        }
-    });
 };
-
-// document.addEventListener('gesturestart', function (e) {
-//     e.preventDefault();
-// });
 
 $(document).ready(function() {
     $('.mobile.world-news .slider').slick({
@@ -169,6 +175,7 @@ $(document).ready(function() {
         //breakpoint: 768,
         variableWidth: true,
         arrows: false,
+        dots: true,
         responsive: [
             {
                 breakpoint: 768,
@@ -191,15 +198,19 @@ $(document).ready(function() {
         ]
     });
 
-    window.addEventListener('resize', function() {
-        requestAnimationFrame(function() {
-            accordionFooter();
-            accordionOurProjects();
-        });
+    //if (window.innerWidth > 767) {
+    $('body').scroll(function(e) {
+        console.log(e);
     });
+    // }
 
-    accordionFooter();
-    accordionOurProjects();
+    window.addEventListener('resize', function() {
+        // requestAnimationFrame(function() {
+        accordionOurProjects();
+        createAccordions();
+        // });
+    });
+    createAccordions();
     mobGamburger();
     carousel();
     chooseCity();

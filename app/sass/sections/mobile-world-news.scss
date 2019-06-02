@@ -6,6 +6,33 @@
 	font-family: 'Open Sans', sans-serif;
 	margin-bottom: 30px;
 
+	.slick-dots {
+		text-align: center;
+		padding: 20px;
+
+		li {
+			display: inline-block;
+			height: 12px;
+			width: 12px;
+			margin: 0 5px;
+			background: #fff;
+			border-radius: 50%;
+			border: 1px solid var(--link-active-more-color);
+
+			&.slick-active {
+				background: var(--link-active-more-color);
+			}
+		}
+
+		button {
+			display: none;
+		}
+	}
+
+	.slick-active {
+
+	}
+
 	.header {
 		display: inline-block;
 		height: 200px;

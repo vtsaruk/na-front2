@@ -69,10 +69,17 @@
   }
   .destop-nav-menu {
     display: inline-block;
+
+    .dropdown {
+      background-image: url(../../images/icons/dropdown_green.png);
+      background-position: calc(100% - 5px) 37px;
+      background-repeat: no-repeat;
+      background-size: 12px;
+    }
     
     .submenu li a {
       text-align: left;
-      padding: 20px 30px;
+      padding: 20px 30px;      
     }
   }
   .destop-nav-menu li:hover .submenu {
@@ -163,6 +170,19 @@
       .firstItem {
         border-top: 2px solid #1b473b;
       }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .destop-nav-menu {
+    li a {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .dropdown {
+      background-position: calc(100%) 37px;
     }
   }
 }

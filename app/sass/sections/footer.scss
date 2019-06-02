@@ -252,7 +252,7 @@ footer {
 		}
 		
 		.col ul {
-			//display: none;
+			display: none;
 		}
 
 		.col .lang {
@@ -334,8 +334,8 @@ footer {
 @media (min-width: 992px) and (max-width: 1199px) {
 	footer {
 		.pay {
-			padding: 7px 15px;
-			float: none;
+			padding: 7px 20px;
+			//float: none;
 		}
 	}
 }
