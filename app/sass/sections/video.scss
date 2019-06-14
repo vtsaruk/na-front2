@@ -1,11 +1,14 @@
 .video {	
 	position: relative;
 	font-family: 'Open Sans', sans-serif;
+	.slider-for-video {
+		background: url('../../images/img-for-video.jpg') no-repeat 0 0;
+    	background-size: cover;
+	}
 
 	video {
 		opacity: 0.5;
 		pointer-events: none;
-		//height: calc(100vh - 165px);
 	}
 
 	.box {

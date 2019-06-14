@@ -1,4 +1,4 @@
-footer {
+footer.last-version {
 	background: #262626;
 	color: #fff;
 	font-family: 'Open Sans', sans-serif;
@@ -127,11 +127,13 @@ footer {
 		position: absolute;
 		margin: 0;
 		height: 200px;
+		width: 100%;
+		overflow: hidden;
+		overflow-y: scroll;
 
 		li {
 			background: #b7b7b7;
 			text-align: center;
-			width: 200px;
 		}
 
 		li:hover {
@@ -158,7 +160,7 @@ footer {
 }
 
 @media (min-width: 992px) {
-	footer {
+	footer.last-version {
 
 		.col:nth-child(2), .col:last-child  {
 			border-left: 1px solid #464646;
@@ -183,18 +185,18 @@ footer {
 }
 
 @media (max-width: 482px) {
-	footer {
+	footer.last-version {
 		.choose-country {
 			width: 160px!important;
 		}
 	}
-	footer .wrapper-country ul li {
+	footer.last-version .wrapper-country ul li {
 		width: 160px !important;
 	}
 }
 
 @media (max-width: 992px) {
-	footer {
+	footer.last-version {
 		text-align: center;
 		padding: 0;
 
@@ -332,10 +334,9 @@ footer {
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-	footer {
+	footer.last-version {
 		.pay {
 			padding: 7px 20px;
-			//float: none;
 		}
 	}
 }

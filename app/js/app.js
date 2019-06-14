@@ -47,12 +47,18 @@ var mobGamburger = function() {
 };
 
 var chooseCity = function() {
+    var isShow = false;
     $('.toggle-list-city').click(function() {
+        if (isShow) {
+            return;
+        }
+        isShow = true;
         $('.list-city').toggle();
         setTimeout(function() {
             $('body').click(function(e) {
                 $('.list-city').toggle();
                 $('body').off('click');
+                isShow = false;
             });
         }, 0);
     });
@@ -67,12 +73,18 @@ var chooseCity = function() {
 };
 
 var chooseCountry = function() {
+    var isShow = false;
     $('.choose-country').click(function() {
+        if (isShow) {
+            return;
+        }
+        isShow = true;
         $('.wrapper-country ul').toggle();
         setTimeout(function() {
             $('body').click(function(e) {
                 $('.wrapper-country ul').toggle();
                 $('body').off('click');
+                isShow = false;
             });
         }, 0);
     });
@@ -198,11 +210,21 @@ $(document).ready(function() {
         ]
     });
 
-    //if (window.innerWidth > 767) {
-    $('body').scroll(function(e) {
-        console.log(e);
-    });
-    // }
+    var video = document.querySelector('video');
+    var videoSlider = document.createElement('div');
+    var videoBoxLogo = document.querySelector('section.video .box');
+    videoSlider.className = 'slider-for-video';
+    videoSlider.style.height = video.offsetHeight + 'px';
+
+    video.addEventListener(
+        'ended',
+        function() {
+            video.remove();
+            videoSlider.prepend(videoBoxLogo);
+            document.querySelector('section.video').prepend(videoSlider);
+        },
+        false
+    );
 
     window.addEventListener('resize', function() {
         // requestAnimationFrame(function() {
@@ -215,6 +237,7 @@ $(document).ready(function() {
     carousel();
     chooseCity();
     chooseCountry();
+    accordionOurProjects();
 
     sliceText('.activity .descript .text', 200);
     sliceText('.world-news .descript .text', 150);

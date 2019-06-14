@@ -28,7 +28,7 @@ html {
 @-ms-viewport{
   width: device-width;
 }
-
+.last-version {
 .more {
     padding: 16px 0;
     border: 1px solid var(--link-active-more-color);
@@ -124,7 +124,4 @@ html {
 object.dropdown {
   margin-left: 10px;
 }
-
-/*.more::after {
-  content: ' \2799';
-}*/
+}
