@@ -9,6 +9,10 @@ header.last-version {
     .container {
       padding: 0;
     }
+
+    .svg-img-search {
+      cursor: pointer;
+    }
     
     .logo {
       width: 250px;
@@ -40,15 +44,17 @@ header.last-version {
         text-align: center;
       }
       .local-wraper {
+        background-image: url('../../images/icons/dropdown.png');
+        background-position: calc(100% - 10px) 15px;
+        background-repeat: no-repeat;
+        background-size: 15px;
+        padding-right: 18px;
+        cursor: pointer;
 
         p {
           margin-top: 0;
           padding: 0 10px;
           padding-top: 7px;
-        }
-
-        .dropdown {
-          margin: 0 10px;
         }
 
         .list-city {
@@ -131,6 +137,7 @@ header.last-version {
         position: absolute;
         right: 5px;
         top: 5px;
+        cursor: pointer;
       }
     }
 

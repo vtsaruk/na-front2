@@ -186,3 +186,19 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+
+  .arrow:before {
+    text-align: right;
+    display: inline;
+    font-size: 16px;
+    font-family: FontAwesome;
+    height: auto;
+    content: "\f105";
+    font-weight: 300;
+    text-shadow: none;
+    width: 10px;
+    display: inline-block;
+  }
+}

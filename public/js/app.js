@@ -48,7 +48,7 @@ var mobGamburger = function() {
 
 var chooseCity = function() {
     var isShow = false;
-    $('.toggle-list-city').click(function() {
+    $('.local-wraper').click(function() {
         if (isShow) {
             return;
         }
