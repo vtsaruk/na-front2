@@ -39,21 +39,20 @@ header.last-version {
       }
       .box>div {
         float: right;
-        min-width: 100px;
         margin-top: 0px;
         text-align: center;
       }
       .local-wraper {
         background-image: url('../../images/icons/dropdown.png');
-        background-position: calc(100% - 10px) 15px;
+        background-position: calc(100% - 15px) 15px;
         background-repeat: no-repeat;
         background-size: 15px;
-        padding-right: 18px;
+        padding-right: 20px;
         cursor: pointer;
 
         p {
           margin-top: 0;
-          padding: 0 10px;
+          padding: 8px 15px;
           padding-top: 7px;
         }
 
@@ -153,7 +152,9 @@ header.last-version {
 
 @media (max-width: 767px) {
   header.last-version {
+    position: relative;
     width: 100%;
+    top: 0;
     height: 50px;
     .container {
       width: 100%; 

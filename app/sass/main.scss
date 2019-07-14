@@ -16,7 +16,8 @@
 @import "sections/video";
 
 
-@import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url('./lib/fonts.googleapis.Roboto.css');
+
 * {
   padding: 0;
   margin: 0;
@@ -29,6 +30,19 @@ html {
 @-ms-viewport{
   width: device-width;
 }
+.sticky-fixed {
+  position: fixed !important;
+  z-index: 1000;
+}
+
+p {
+  line-height: 1.5;
+}
+
+h1.text-center {
+  font-family: Merriweather;
+}
+
 .last-version {
 .more {
     padding: 16px 0;
@@ -54,19 +68,6 @@ html {
 }
 
 @media (max-width: 767px) {
-
-  .world-news {
-    //display: none;
-  }
-
-  .carousel {
-    //display: none;
-  }
-
-  .video {
-    //display: none;
-  }
-
   .h3-header {
     font-family: Merriweather;
     font-style: normal;
@@ -76,11 +77,6 @@ html {
     color: #00204C;
     text-align: left;
   }
-
-  footer {
-    //display: none;
-  }
-
 }
 
 @media (min-width: 768px) and (max-width: 991px) {

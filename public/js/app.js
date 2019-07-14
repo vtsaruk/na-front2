@@ -46,35 +46,79 @@ var mobGamburger = function() {
     });
 };
 
+var wrapperMobileHeader = function() {
+    let isStickClass = false;
+
+    return function () {
+
+        if (window.innerWidth > 767 && isStickClass) {
+            if (isStickClass) {
+                isStickClass = false;
+                $('header').removeClass('sticky-fixed');
+                $('.nav-wrapper').removeClass('sticky-fixed');
+            }
+        }
+        window.onscroll = function () {
+            if (window.innerWidth > 767 && isStickClass) {
+                if (isStickClass) {
+                    isStickClass = false;
+                    $('header').removeClass('sticky-fixed');
+                    $('.nav-wrapper').removeClass('sticky-fixed');
+            }
+            return;
+            }
+            
+            if (window.innerWidth > 767) {
+                return;
+            }
+            
+            if (window.pageYOffset !== 0) {
+                if (isStickClass) {
+                    return
+                }            
+                $('header').addClass('sticky-fixed');
+                $('.nav-wrapper').addClass('sticky-fixed');
+                isStickClass = true;
+            } else {
+                $('header').removeClass('sticky-fixed');
+                $('.nav-wrapper').removeClass('sticky-fixed');
+                isStickClass = false;
+            }
+        }
+    }
+}
+
+let mobileHeader2 = wrapperMobileHeader();
+
 var chooseCity = function() {
     var isShow = false;
-    $('.local-wraper').click(function() {
+    $('.local-wraper').onclick = function() {
         if (isShow) {
             return;
         }
         isShow = true;
         $('.list-city').toggle();
         setTimeout(function() {
-            $('body').click(function(e) {
+            $('body').onclick(function(e) {
                 $('.list-city').toggle();
                 $('body').off('click');
                 isShow = false;
             });
         }, 0);
-    });
-    $('.list-city li').click(function(e) {
+    };
+    $('.list-city li').onclick = function(e) {
         var listPhone = e.target.dataset.phone.split(';');
         $('.list-phone').html('');
         $('.name-city').text(e.target.innerText);
         listPhone.forEach(function(phone) {
             $('.phone-wraper div').append('<p>' + phone + '</p>');
         });
-    });
+    };
 };
 
 var chooseCountry = function() {
     var isShow = false;
-    $('.choose-country').click(function() {
+    $('.choose-country').onclick = function() {
         if (isShow) {
             return;
         }
@@ -87,7 +131,7 @@ var chooseCountry = function() {
                 isShow = false;
             });
         }, 0);
-    });
+    };
 };
 
 var createAccordions = function() {
@@ -147,10 +191,14 @@ var accordionOurProjects = function() {
     }
 
     if (window.innerWidth > 767) {
-        $('.search .svg-img-search').click(function() {
+        $('.search .svg-img-search').onclick=function() {
             $('header .box').hide();
             setTimeout(function() {
-                $('body').click(function(e) {
+                $('body').onclick(function(e) {
+                    if (e.target.className === 'svg-img-search') {
+                        $('#input-search-2').trigger('select');
+                        return;
+                    }
                     if (e.target.id !== 'input-search-2') {
                         $('header .box').show();
                         $('header .search-2').removeClass('active');
@@ -159,7 +207,7 @@ var accordionOurProjects = function() {
                 });
             }, 0);
             $('header .search-2').addClass('active');
-        });
+        };
         let prodjects = document.querySelectorAll('.our-projects .col.right .cell');
         let intervalCount = 0;
         intervalOurProjects = setInterval(() => {
@@ -215,6 +263,7 @@ $(document).ready(function() {
     var videoBoxLogo = document.querySelector('section.video .box');
     videoSlider.className = 'slider-for-video';
     videoSlider.style.height = video.offsetHeight + 'px';
+    mobileHeader2()
 
     video.addEventListener(
         'ended',
@@ -230,6 +279,7 @@ $(document).ready(function() {
         // requestAnimationFrame(function() {
         accordionOurProjects();
         createAccordions();
+        mobileHeader2()
         // });
     });
     createAccordions();

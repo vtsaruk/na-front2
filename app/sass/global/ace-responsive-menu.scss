@@ -145,9 +145,6 @@ ul {
 ----------------------------------------*/
 .menu-toggle {
     display: none;
-    float: left;
-    width: 100%;
-    background: #333;
 }
 .menu-toggle h3 {
     float: left;
@@ -173,9 +170,6 @@ ul {
     background-color: #F5F5F5 !important;
 }
 .menu-toggle #menu-btn {
-    float: right;
-    background: #202020;
-    border: 1px solid #0C0C0C;
     padding: 8px;
     border-radius: 5px;
     cursor: pointer;
@@ -320,7 +314,7 @@ ul[data-menu-style="vertical"] li a:hover {
         content: "\f105";
     }
     li.menu-active > a > .arrow:before {
-        content: "\f107" !important;
+        //content: "\f107" !important;
     }
     .ace-responsive-menu li ul.sub-menu > li {
         width: 100%;

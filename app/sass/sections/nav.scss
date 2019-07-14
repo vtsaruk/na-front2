@@ -5,6 +5,9 @@
    > li {
       position: relative;
     }
+    a {
+      background: #fff;
+    }
     .level_two {
       display: none;
       > li {
@@ -48,6 +51,9 @@
       background: #48beb7;
       color: white;
     }
+    a:hover .dropdown {
+      opacity: 0;
+    }
   }
 }
 @media (min-width: 768px) {
@@ -71,8 +77,12 @@
     display: inline-block;
 
     .dropdown {
+      margin-left: 5px;
+      display: inline-block;
+      height: 12px;
+      width: 12px;
       background-image: url(../../images/icons/dropdown_green.png);
-      background-position: calc(100% - 5px) 37px;
+      background-position: 0 3px;
       background-repeat: no-repeat;
       background-size: 12px;
     }
@@ -91,47 +101,56 @@
 }
 
 @media (max-width: 767px) {
+  .nav-wrapper {
+    position: relative;
+    width: 100%;
+    top:75px;
+  }
   .destop-nav-menu {
     display: none;
+  }
+  .nav-area li > a:hover > .arrow {
+    background-image: url(../../images/icons/dropdown.png);
   }
   .arrow {
       position: absolute;
       right: 7%;
       top: 36%;
-    font-family: FontAwesome;
-    content: "\f107";
-    &:before {
-      text-align: right;
-      display: inline;
-      font-size: 16px;
-      font-family: FontAwesome;
-      height: auto;
-      content: "\f105";
-      font-weight: 300;
-      text-shadow: none;
-      width: 10px;
-      display: inline-block;
-    }
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-image: url('../../images/icons/dropdown_green.png');
+      background-size: 20px;
+      background-repeat: no-repeat;
+      background-position-y: 2px;
   }
+  
+  #menu-btn {
+    top: 10px;
+    position: absolute;
+    right: 0;
+    background: #1b473b;
+    border: none;
+  }
+  .sticky-fixed #menu-btn {
+    position: fixed;
+
+  }
+
   .nav-area {
     position: relative;
 
     .menu-toggle {
       position: absolute;
-      top: -65px;
+      top: 12px;
       background: none;
-
-      #menu-btn {
-        background: #1b473b;
-        border: none;
-      }
     }
     ul > li {
       display: block;
       text-align: left;
 
       > a {
-          position: relative;
+        position: relative;
         text-align: left;
         padding: 15px 10px;
         border-bottom: 1px solid #cccccc;
@@ -184,21 +203,5 @@
     .dropdown {
       background-position: calc(100%) 37px;
     }
-  }
-}
-
-@media (max-width: 767px) {
-
-  .arrow:before {
-    text-align: right;
-    display: inline;
-    font-size: 16px;
-    font-family: FontAwesome;
-    height: auto;
-    content: "\f105";
-    font-weight: 300;
-    text-shadow: none;
-    width: 10px;
-    display: inline-block;
   }
 }

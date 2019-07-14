@@ -39,9 +39,16 @@
     <body class="last-version">
         <header class="last-version">
             <div class="container">
-                <a href="/">
+                <a href="/" class="logo">
                     <img src="images/Logo_white.png" class="logo" />
                 </a>
+                <div class="menu-toggle">
+                    <button type="button" id="menu-btn">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
                 <div class="box">
                     <!-- <div class="button-wraper">
                         <span class="vertic-line mr-top-8"></span>
@@ -118,27 +125,23 @@
             </div>
         </header>
         <!-- https://codepen.io/daviddarnes/pen/wZaXVd -->
-        <nav class="nav-area">
-            <div class="menu-toggle">
-                <button type="button" id="menu-btn">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <ul class="destop-nav-menu">
-                <li>
-                    <a href="#" class="dropdown">
+        <div class="nav-wrapper">
+
+            <nav class="nav-area">
+                <ul class="destop-nav-menu">
+                    <li>
+                        <a href="#">
                         Про нас
+                        <span class="dropdown"></span>
                     </a>
                     <ul class="submenu">
                         <li>
                             <a href="/uk/about/shcho-take-novyi-akropol"
                                 >Що таке «Новий Акрополь»</a
-                            >
-                        </li>
-                        <li>
-                            <a href="/uk/about/novyi-akropol-v-zmi">ЗМІ про нас</a>
+                                >
+                            </li>
+                            <li>
+                                <a href="/uk/about/novyi-akropol-v-zmi">ЗМІ про нас</a>
                         </li>
                         <li>
                             <a href="/#">Історія створення</a>
@@ -153,7 +156,10 @@
                 </li>
                 <li><a href="/uk/uk/projects">Що ми робимо</a></li>
                 <li>
-                    <a href="#" class="dropdown">Почитати</a>
+                    <a href="#">
+                        Почитати
+                        <span class="dropdown"></span>
+                    </a>
                     <!-- Level free-->
                     <ul class="submenu">
                         <li>
@@ -179,7 +185,7 @@
                     <ul class="level_two">
                         <li class="firstItem">
                             <a href="/uk/about/shcho-take-novyi-akropol"
-                                >Що таке «Новий Акрополь»</a
+                            >Що таке «Новий Акрополь»</a
                             >
                         </li>
                         <li>
@@ -195,7 +201,7 @@
                 </li>
                 <li>
                     <a href="http://newacropolis.org.ua/uk/announcements"
-                        >Школа філософії</a
+                    >Школа філософії</a
                     >
                 </li>
                 <li><a href="/uk/uk/projects">Що ми робимо</a></li>
@@ -218,6 +224,7 @@
                 <li><a href="/uk/contacts">Контакти</a></li>
             </ul>
         </nav>
+    </div>
         <div class="slider"></div>
         <section class="video">
             <div class="box">
@@ -446,12 +453,34 @@
                 <div>
                     <form action="">
                         <h5 class="label-form">Записатись на курс</h5>
-                        <input type="text" placeholder="Ім'я" name="name" />
-                        <input type="text" placeholder="e-mail" name="mail" />
-                        <input type="text" placeholder="Телефон" name="phone" />
+                        <input
+                            type="text"
+                            placeholder="Ім'я"
+                            id="input-name"
+                            name="name"
+                            required
+                            pattern="[A-Za-zа-яА-Я]{2,}"
+                        />
+                        <label for="input-name"></label>
+                        <input
+                            type="text"
+                            placeholder="e-mail"
+                            name="mail"
+                            id="input-email"
+                            required
+                            pattern="^\w+([.-]?\w+)*@\w+([.-]?\w+)*(.\w{2,3})+$"
+                        />
+                        <label for="input-email"></label>
+                        <input
+                            type="text"
+                            placeholder="Телефон"
+                            name="phone"
+                        />
 
                         <div class="select-wrap">
                             <select
+                            id="select-city"
+                            required
                                 name="city"
                                 id="city"
                                 class="form-item__element form-item__element--select"
@@ -464,6 +493,7 @@
                                 <option value="">Харьків</option>
                                 <option value="">Вінниця</option>
                             </select>
+                            <label for="select-city"></label>
                         </div>
 
                         <button class="submit">Надіслати</button>

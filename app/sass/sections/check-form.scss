@@ -6,9 +6,10 @@
 	.container {
 		display: flex;
 		height: 700px;
+		padding-top: 165px !important;
 		
 		.cours-name {
-			padding: 90px 100px;
+			padding: 0px 100px;
 			color: #fff;
 			width: 385px;
 
@@ -41,7 +42,7 @@
 			border-radius: 5px;
 			background: #fff;
 			width: 315px;
-			margin-top: 115px;
+			height: 425px;
 			padding: 30px 25px;
 			margin-left: 215px;
 
@@ -51,8 +52,46 @@
 				color: #5a5a5a;
 				margin-bottom: 35px;
 			}
+			// input[name="name"]:dirty:invalid {
+			// 	border: 1px solid #c9302c;
+			// 	& + label:after {
+			// 		content: "Невірно заповнене ім'я";
+			// 		color: #c9302c;
+			// 	}
+			// }
+			// input[name="name"]:required {
+			// 	border: 1px solid #46b8da;
+			// 	& + label:after {
+			// 		content: "Обов'язково";
+			// 		color: #46b8da;
+			// 	}
+			// }
+			
+			// input[name="name"]:valid + label:after {
+			// 	display: none;
+			// }
 
-			input[type="text"],select {
+			// input[name="mail"]:invalid {
+			// 	border: 1px solid #c9302c;
+			// 	& + label:after {
+			// 		content: "Невірно заповнен email";
+			// 		color: #c9302c;
+			// 	}
+			// }
+			// input[name="mail"]:required {
+			// 	border: 1px solid #46b8da;
+			// 	& + label:after {
+			// 		content: "Обов'язково";
+			// 		color: #46b8da;
+			// 	}
+			// }
+			
+			// input[name="mail"]:valid + label:after {
+			// 	display: none;
+			// }
+			//, input:focus:invalid {
+
+			input[type="text"],input[type="email"],input[type="tel"],select {
 				height: 35px;
 				width: 295px;
 				font-size: 16px;
@@ -99,42 +138,54 @@
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
-	.check-form .container {
-		.cours-name {
-			padding: 90px 50px;
-		}
-		form {
-			margin-left: 0;
+	.check-form {
+		.container {
+			height: 600px;
+			padding-top: 125px !important;
+			.cours-name {
+				padding: 90px 50px 0 50px;
+			}
+			form {
+				margin-left: 0;
+				//height: 430px;
 
-			.confirm {
-				height: 20px;
-				width: 20px;
+				.confirm {
+					height: 20px;
+					width: 20px;
+				}
 			}
 		}
 	}
   }
   
  @media (min-width: 992px) and (max-width: 1199px) {
-	.check-form .container {
-		form {
-			margin-left: 100px;
+	.check-form {
+		.container {
+			padding-top: 115px !important;
+			form {
+				margin-left: 100px;
+			}
 		}
 	}
 }
 
 @media (max-width: 482px) {
-	.check-form .container {
-		form {
-			width: 270px;
-		}
+	.check-form {
+		.container {
+			padding-top: 90px !important;
 
-		input[type="text"] {
-			width: 250px !important;
-			border: 1px solid rgb(169, 169, 169);
-		}
+			form {
+				width: 270px;
+			}
 
-		select {
-			width: 270px !important;
+			input[type="text"],input[type="email"],input[type="tel"] {
+				width: 250px !important;
+				border: 1px solid rgb(169, 169, 169);
+			}
+
+			select {
+				width: 270px !important;
+			}
 		}
 	}
 }
