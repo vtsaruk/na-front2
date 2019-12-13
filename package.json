@@ -18,7 +18,7 @@
     "gulp-sass": "^4.0.1",
     "gulp.spritesmith": "^6.9.0",
     "node-sass": "^4.9.3",
-    "npm": "^6.4.1",
+    "npm": "^6.13.4",
     "rebuild": "^0.1.2",
     "rename": "^1.0.4",
     "rimraf": "^2.6.2",
